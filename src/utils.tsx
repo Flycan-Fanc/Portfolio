@@ -1,4 +1,4 @@
-import myProfileFile from "./assets/MyProfile.pdf";
+import myProfileFile from "./assets/MyResume.pdf";
 
 export const handleResumeDownload = () => {
   const anchor = document.createElement("a");
