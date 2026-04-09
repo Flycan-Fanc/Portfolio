@@ -1,4 +1,4 @@
-import { Badge } from './Badge';
+import { Badge } from "./Badge";
 
 type ProjectCardProps = {
   name: string;
@@ -7,9 +7,10 @@ type ProjectCardProps = {
   highlights: string[];
   tech: string[];
   links: Array<{ label: string; href: string; placeholder?: boolean }>;
+  imgs?: string;
 };
 
-export function ProjectCard({ name, status, summary, highlights, tech, links }: ProjectCardProps) {
+export function ProjectCard({ name, status, summary, highlights, tech, links, imgs }: ProjectCardProps) {
   return (
     <article className="grid gap-8 rounded-[32px] border border-slate-200 bg-white p-8 shadow-soft transition hover:-translate-y-1 lg:grid-cols-[1.1fr_0.9fr]">
       <div>
@@ -38,13 +39,9 @@ export function ProjectCard({ name, status, summary, highlights, tech, links }: 
 
         <div className="mt-8 flex flex-wrap gap-3">
           {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
-            >
+            <a key={link.label} href={link.href} className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50">
               {link.label}
-              {link.placeholder ? ' · 待替换' : ''}
+              {link.placeholder ? " · 待替换" : ""}
             </a>
           ))}
         </div>
@@ -56,7 +53,7 @@ export function ProjectCard({ name, status, summary, highlights, tech, links }: 
             <p className="text-sm uppercase tracking-[0.18em] text-teal-700">Project Snapshot</p>
             <p className="mt-4 text-xl font-medium text-slate-900">{name}</p>
           </div>
-          <div className="space-y-4 text-sm text-slate-600">
+          {/* <div className="space-y-4 text-sm text-slate-600">
             <div className="rounded-2xl bg-white px-4 py-3">
               真实项目持续迭代，而不是一次性展示稿。
             </div>
@@ -66,7 +63,8 @@ export function ProjectCard({ name, status, summary, highlights, tech, links }: 
             <div className="rounded-2xl bg-white px-4 py-3">
               预留截图或 Demo 资源位，后续可直接补齐。
             </div>
-          </div>
+          </div> */}
+          <img src={imgs}></img>
         </div>
       </div>
     </article>

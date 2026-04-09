@@ -5,7 +5,7 @@ export function Footer() {
         <p>© 2026 Flycan Fanc</p>
         <p>Built with React + TypeScript + Tailwind CSS</p>
         <div className="flex gap-4">
-          <a href="https://github.com/your-github" className="hover:text-slate-900">
+          <a href="https://github.com/Flycan-Fanc" className="hover:text-slate-900">
             GitHub
           </a>
           <a href="mailto:your-email@example.com" className="hover:text-slate-900">
