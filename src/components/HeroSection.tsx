@@ -1,5 +1,6 @@
 import { Badge } from "./Badge";
 import { heroTags } from "../data";
+import { handleResumeDownload } from "../utils";
 
 export function HeroSection() {
   return (
@@ -24,9 +25,11 @@ export function HeroSection() {
               <a href="#projects" className="rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-700">
                 查看项目
               </a>
-              <a href="#" className="rounded-full border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-white">
-                下载简历
-              </a>
+              <button onClick={handleResumeDownload}>
+                <a href="#" className="rounded-full border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-white">
+                  下载简历
+                </a>
+              </button>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-3">

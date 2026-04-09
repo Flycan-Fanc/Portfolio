@@ -8,7 +8,7 @@ export function Footer() {
           <a href="https://github.com/Flycan-Fanc" className="hover:text-slate-900">
             GitHub
           </a>
-          <a href="mailto:your-email@example.com" className="hover:text-slate-900">
+          <a href="mailto:ericfanwork@163.com" className="hover:text-slate-900">
             Email
           </a>
         </div>
