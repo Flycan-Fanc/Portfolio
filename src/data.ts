@@ -99,5 +99,5 @@ export const contactLinks = [
   { label: "GitHub", value: "github.com/Flycan-Fanc", href: "https://github.com/Flycan-Fanc", placeholder: false },
   { label: "Email", value: "ericfanwork@163.com", href: "mailto:ericfanwork@163.com", placeholder: false },
   { label: "Resume", value: "简历下载", href: "#", placeholder: false },
-  { label: "Website", value: "个人网站主页", href: "#", placeholder: false },
+  { label: "Website", value: "个人网站主页", href: "https://flycan-fanc.github.io/portfolio/", placeholder: false },
 ];
