@@ -4,13 +4,14 @@ import { handleResumeDownload } from "../utils";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="section-anchor mx-auto max-w-6xl px-6 py-24 lg:px-8">
-      <div className="relative overflow-hidden rounded-[36px] border border-sky-100/80 bg-[linear-gradient(135deg,_#d2e6ff_0%,_#c9f2ee_34%,_#dcf6f6_68%,_#d8eefe_100%)] px-8 py-12 text-slate-900 shadow-soft sm:px-12">
+    <section id="contact" className="section-anchor mx-auto max-w-6xl px-6 py-28 lg:px-8 lg:pb-32">
+      <div className="relative overflow-hidden rounded-[40px] border border-white/80 bg-[linear-gradient(135deg,_rgba(219,234,254,0.88)_0%,_rgba(204,251,241,0.84)_34%,_rgba(255,255,255,0.72)_64%,_rgba(224,242,254,0.82)_100%)] px-8 py-12 text-slate-900 shadow-[0_30px_100px_-62px_rgba(15,23,42,0.62)] backdrop-blur-2xl sm:px-12 lg:py-14">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -left-10 top-[-10%] h-80 w-80 bg-[radial-gradient(circle,_rgba(129,140,248,0.24),_transparent_68%)]" />
-          <div className="absolute right-[-8%] top-[8%] h-80 w-96 bg-[radial-gradient(circle,_rgba(34,211,238,0.2),_transparent_66%)]" />
-          <div className="absolute bottom-[-18%] left-[18%] h-72 w-[30rem] bg-[radial-gradient(circle,_rgba(191,219,254,0.42),_transparent_72%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(140deg,_rgba(255,255,255,0.18),_rgba(255,255,255,0.04))]" />
+          <div className="absolute -left-12 top-[-12%] h-80 w-80 rounded-full bg-[radial-gradient(circle,_rgba(129,140,248,0.18),_transparent_68%)]" />
+          <div className="absolute right-[-8%] top-[8%] h-80 w-96 rounded-full bg-[radial-gradient(circle,_rgba(34,211,238,0.24),_transparent_66%)]" />
+          <div className="absolute bottom-[-18%] left-[18%] h-72 w-[30rem] rounded-full bg-[radial-gradient(circle,_rgba(190,242,100,0.22),_transparent_72%)]" />
+          <div className="absolute bottom-[-20%] right-[8%] h-64 w-72 rounded-full bg-[radial-gradient(circle,_rgba(251,191,36,0.16),_transparent_70%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(140deg,_rgba(255,255,255,0.34),_rgba(255,255,255,0.08))]" />
         </div>
 
         <div className="relative z-10">
@@ -22,7 +23,7 @@ export function ContactSection() {
 
               if (isResumeDownload) {
                 return (
-                  <button key={link.label} type="button" onClick={handleResumeDownload} className="rounded-[24px] border border-white/70 bg-white/55 px-5 py-4 text-left transition hover:bg-white/72">
+                  <button key={link.label} type="button" onClick={handleResumeDownload} className="rounded-[24px] border border-white/75 bg-white/58 px-5 py-4 text-left shadow-[0_14px_38px_-30px_rgba(15,23,42,0.5)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/82">
                     <p className="text-sm uppercase tracking-[0.18em] text-teal-700">{link.label}</p>
                     <p className="mt-2 text-base text-slate-800">简历下载</p>
                   </button>
@@ -30,7 +31,7 @@ export function ContactSection() {
               }
 
               return (
-                <a key={link.label} href={link.href} className="rounded-[24px] border border-white/70 bg-white/55 px-5 py-4 transition hover:bg-white/72">
+                <a key={link.label} href={link.href} className="rounded-[24px] border border-white/75 bg-white/58 px-5 py-4 shadow-[0_14px_38px_-30px_rgba(15,23,42,0.5)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/82">
                   <p className="text-sm uppercase tracking-[0.18em] text-teal-700">{link.label}</p>
                   <p className="mt-2 text-base text-slate-800">
                     {link.value}
@@ -42,10 +43,10 @@ export function ContactSection() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="mailto:ericfanwork@163.com" className="rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-700">
+            <a href="mailto:ericfanwork@163.com" className="rounded-full bg-[linear-gradient(135deg,_#0891b2,_#14b8a6,_#22c55e)] px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_48px_-20px_rgba(20,184,166,0.82)] transition duration-300 hover:-translate-y-1">
               发邮件联系我
             </a>
-            <a href="https://github.com/Flycan-Fanc" className="rounded-full border border-slate-300/80 bg-white/45 px-6 py-3 text-sm font-medium text-slate-800 transition hover:bg-white/72">
+            <a href="https://github.com/Flycan-Fanc" className="rounded-full border border-white/80 bg-white/52 px-6 py-3 text-sm font-semibold text-slate-800 shadow-[0_14px_34px_-28px_rgba(15,23,42,0.45)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/82">
               查看 GitHub
             </a>
           </div>

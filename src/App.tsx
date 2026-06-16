@@ -40,28 +40,27 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-ink">
-      <div className="relative">
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[calc(100vh+80px)] overflow-hidden">
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,_#bfdcff_0%,_#b8f0ed_26%,_#ddf6f5_52%,_#f8fafc_100%)]" />
-          <div className="absolute left-0 top-0 h-[30rem] w-[34rem] bg-[radial-gradient(circle_at_top_left,_rgba(129,140,248,0.32),_transparent_68%)]" />
-          <div className="absolute right-0 top-0 h-[28rem] w-[38rem] bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.36),_transparent_62%)]" />
-          <div className="absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,_rgba(255,255,255,0.28),_rgba(255,255,255,0))]" />
-        </div>
-
-        <div className="relative z-10">
-          <Navbar activeSection={activeSection} />
-          <main>
-            <HeroSection />
-            <AboutSection />
-            <SkillsSection />
-            <ProjectsSection />
-            <ValueSection />
-            <ContactSection />
-          </main>
-        </div>
+    <div className="min-h-screen overflow-hidden bg-[#f6fbff] text-ink">
+      <div className="cloud-garden-bg pointer-events-none fixed inset-0 z-0" aria-hidden="true">
+        <div className="cloud-orb cloud-orb-a" />
+        <div className="cloud-orb cloud-orb-b" />
+        <div className="cloud-orb cloud-orb-c" />
+        <div className="cloud-orb cloud-orb-d" />
+        <div className="cloud-noise" />
       </div>
-      <Footer />
+
+      <div className="relative z-10">
+        <Navbar activeSection={activeSection} />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ValueSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
